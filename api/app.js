@@ -1,5 +1,9 @@
 const express = require("express");
 
-const app = express()
+const app = express();
 
-module.exports = app
+app.get("/", (req, res) => {
+  res.status(200).json({ api: 'running' });
+});
+
+module.exports = app;
